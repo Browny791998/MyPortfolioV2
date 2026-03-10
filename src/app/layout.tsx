@@ -3,9 +3,9 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "./theme-provider";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import CursorEffect from "@/components/CursorEffect";
+import SpaceLink from "@/components/SpaceLink";
 
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
@@ -42,11 +42,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} ${spaceGrotesk.className}`} >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true} disableTransitionOnChange>
           <CursorEffect />
+          <SpaceLink />
           <SmoothScrolling>
             <Navbar />
-            <ThemeSwitcher />
             {children}
           </SmoothScrolling>
         </ThemeProvider>

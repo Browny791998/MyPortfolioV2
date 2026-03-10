@@ -10,6 +10,7 @@ import TimelineV2 from "./pages/timelinev2";
 import Work from "./pages/work";
 import { useEffect, useState } from "react";
 import Contact from "./pages/contact";
+import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
 
 const Languages = dynamic(() => import('./pages/languages'), { ssr: false });
@@ -240,6 +241,8 @@ export default function Home() {
       <Languages />
       {/* Contact Section */}
       <Contact />
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

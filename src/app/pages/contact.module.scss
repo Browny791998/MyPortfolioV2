@@ -1,0 +1,145 @@
+.moonScene {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Moon ── */
+.moon {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #e8e4dc, #c4bfb5 40%, #9e9889 80%);
+  position: relative;
+  box-shadow:
+    0 0 30px rgba(255, 255, 255, 0.15),
+    0 0 60px rgba(200, 190, 170, 0.1);
+  overflow: hidden;
+}
+
+.crater {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #b0a999 0%, #a09882 60%, transparent 100%);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.moonGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  pointer-events: none;
+}
+
+/* ── Astronaut orbit ring ── */
+.astronautOrbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  /* orbit ring is invisible — the astronaut rides on it */
+}
+
+.astronautWrapper {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform-origin: 0 106px; /* center of the orbit */
+}
+
+/* ── Astronaut (pure CSS) ── */
+.astronaut {
+  position: relative;
+  width: 26px;
+  height: 40px;
+  transform: translateX(-50%);
+}
+
+.helmet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.visor {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 10px;
+  height: 7px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #1a1a2e, #3a3a6e);
+  box-shadow: 0 0 3px rgba(100, 100, 255, 0.3);
+}
+
+.body {
+  width: 16px;
+  height: 14px;
+  background: linear-gradient(180deg, #d4d4d4, #b8b8b8);
+  margin: 1px auto 0;
+  border-radius: 3px 3px 2px 2px;
+  position: relative;
+}
+
+.backpack {
+  position: absolute;
+  right: -5px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  background: linear-gradient(180deg, #999, #777);
+  border-radius: 1px;
+}
+
+.legLeft,
+.legRight {
+  position: absolute;
+  bottom: -10px;
+  width: 5px;
+  height: 12px;
+  background: linear-gradient(180deg, #c0c0c0, #a0a0a0);
+  border-radius: 0 0 2px 2px;
+  transform-origin: top center;
+}
+
+.legLeft {
+  left: 4px;
+}
+
+.legRight {
+  right: 4px;
+}
+
+.armLeft,
+.armRight {
+  position: absolute;
+  top: 20px;
+  width: 4px;
+  height: 10px;
+  background: linear-gradient(180deg, #d0d0d0, #aaa);
+  border-radius: 2px;
+  transform-origin: top center;
+}
+
+.armLeft {
+  left: -2px;
+}
+
+.armRight {
+  right: -2px;
+}

@@ -1,19 +1,18 @@
 'use client'
 import React from 'react'
-import { Carousel } from 'react-carousel3';
-import Image from 'next/image';
-import { SiReact, 
+import {
+    SiReact,
     SiTailwindcss,
-     SiNextdotjs, 
-     SiExpress, 
-     SiMongodb, 
-     SiBootstrap, 
-     SiLaravel, 
-     SiVuedotjs,
-     SiPython,
+    SiNextdotjs,
+    SiExpress,
+    SiMongodb,
+    SiBootstrap,
+    SiLaravel,
+    SiVuedotjs,
+    SiPython,
     SiPostgresql,
-     SiPrisma,
-     SiDocker
+    SiPrisma,
+    SiDocker
 } from 'react-icons/si';
 function Languages() {
 
@@ -73,23 +72,37 @@ function Languages() {
         },
     ]
     return (
-        <>
-        <h2 className="text-3xl font-bold text-center mb-8">Programming Languages</h2>
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-            }}
-        >
-            <Carousel height={300} width={1000} yOrigin={42} yRadius={70} autoPlay={true}>
-                {languages.map((language, index) => (
-                    <div key={index} >
-                        {language.icon}
-                    </div>
-                ))}
-            </Carousel>
+        <div className="relative z-0 py-16 overflow-hidden">
+            <h2 className="text-3xl font-bold text-center mb-12 dark:text-gray-100 text-gray-800">
+                Programming Languages
+            </h2>
+
+            {/* Fading edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
+
+            <div className="flex w-[200%] gap-8 animate-marquee">
+                {/* First set of icons */}
+                <div className="flex justify-around min-w-[100%] gap-8">
+                    {languages.map((language, index) => (
+                        <div key={`set1-${index}`} className="flex flex-col items-center justify-center text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors duration-300">
+                            {language.icon}
+                            <span className="mt-3 text-sm font-semibold tracking-wide">{language.name}</span>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Exact duplicate for seamless looping */}
+                <div className="flex justify-around min-w-[100%] gap-8">
+                    {languages.map((language, index) => (
+                        <div key={`set2-${index}`} className="flex flex-col items-center justify-center text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors duration-300">
+                            {language.icon}
+                            <span className="mt-3 text-sm font-semibold tracking-wide">{language.name}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-        </>
     )
 }
 

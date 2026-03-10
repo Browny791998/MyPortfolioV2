@@ -38,12 +38,22 @@ const timelineData = [
   {
     title: "Metateam Myanmar",
     subtitle: "Senior Developer",
-    date: "2022 – 2024",
+    date: "2022 – 2025",
     description:
       "Worked on the Nursing Schedule Management System as a senior developer, gaining valuable experience in system architecture.",
     icon: <MdWork className="text-xl" />,
     planet: "/images/space-planet-svg-bundle-space-planet_6.svg",
     side: "right" as const,
+  },
+    {
+    title: "Part Time Job",
+    subtitle: "Senior Developer",
+    date: "2025 – Present",
+    description:
+      "Worked on IELTS learning management system and AI-based learning platform.",
+    icon: <MdWork className="text-xl" />,
+    planet: "/images/space-planet-svg-bundle-space-planet_5.svg",
+    side: "left" as const,
   },
 ];
 

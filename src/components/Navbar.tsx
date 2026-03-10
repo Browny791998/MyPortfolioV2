@@ -5,6 +5,7 @@ import { Space_Grotesk } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const spaceGrotesk = Space_Grotesk({
     subsets: ['latin'],
@@ -16,6 +17,7 @@ const mobileLinks = [
     { href: "#about", label: "About", planet: "/images/space-planet-svg-bundle-space-planet_7.svg" },
     { href: "#work", label: "My Work", planet: "/images/space-planet-svg-bundle-space-planet_9.svg" },
     { href: "#contact", label: "Contact", planet: "/images/space-planet-svg-bundle-space-planet_11.svg" },
+    { href: "https://stack-logic-blog.vercel.app/", label: "Blog", planet: "/images/space-planet-svg-bundle-space-planet_12.svg" },
 ];
 
 const itemVariants = {
@@ -70,6 +72,7 @@ export default function Navbar() {
                         { href: "#about", label: "About" },
                         { href: "#work", label: "My Work" },
                         { href: "#contact", label: "Contact" },
+                        { href: "https://stack-logic-blog.vercel.app/", label: "Blog" },
                     ].map(({ href, label }, i) => (
                         <motion.li
                             key={href}
@@ -89,6 +92,7 @@ export default function Navbar() {
                     <li><a href="https://www.linkedin.com/in/yehtetaung791998" target="_blank"><BsLinkedin className="hover:text-[#0077b5] text-xl" /></a></li>
                     <li><a href="https://github.com/Browny791998" target="_blank"><BsGithub className="hover:text-gray-400 text-xl" /></a></li>
                     <li><a href="https://www.facebook.com/profile.php?id=100073584559399" target="_blank"><BsFacebook className="hover:text-[#3b5998] text-xl" /></a></li>
+                    <li><ThemeSwitcher /></li>
                 </ul>
 
                 {/* Mobile fullscreen menu */}
@@ -138,6 +142,7 @@ export default function Navbar() {
                                 <li><a href="https://www.linkedin.com/in/yehtetaung791998" target="_blank"><BsLinkedin className="hover:text-[#0077b5] text-2xl text-white" /></a></li>
                                 <li><a href="https://github.com/Browny791998" target="_blank"><BsGithub className="hover:text-gray-400 text-2xl text-white" /></a></li>
                                 <li><a href="https://www.facebook.com/profile.php?id=100073584559399" target="_blank"><BsFacebook className="hover:text-[#3b5998] text-2xl text-white" /></a></li>
+                                <li><ThemeSwitcher /></li>
                             </motion.ul>
                         </motion.div>
                     )}
