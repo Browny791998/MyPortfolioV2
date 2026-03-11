@@ -46,7 +46,7 @@ const timelineData = [
     side: "right" as const,
   },
     {
-    title: "Part Time Job",
+    title: "Freelance",
     subtitle: "Senior Developer",
     date: "2025 – Present",
     description:
